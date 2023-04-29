@@ -6,17 +6,14 @@ import LefNav from '../Pages/Shared/LeftNav/LefNav';
 import RightNav from '../Pages/Shared/RightNav/RightNav';
 import { Outlet } from 'react-router-dom';
 
-const Main = () => {
+const NewsLayout = () => {
     return (
         <div>
             <Header></Header>
             <Container>
-                
+
                 <Row>
-                    <Col lg={3}>
-                        <LefNav></LefNav>
-                    </Col>
-                    <Col lg={6}>
+                    <Col lg={9}>
                         <Outlet></Outlet>
                     </Col>
                     <Col lg={3}>
@@ -24,10 +21,9 @@ const Main = () => {
                     </Col>
                 </Row>
             </Container>
-
             <Footer></Footer>
         </div>
     );
 };
 
-export default Main;
+export default NewsLayout;
