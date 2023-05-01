@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const LefNav = () => {
     const [catagories, setCatagories] = useState([]);
     useEffect(() =>{
-        fetch("http://localhost:5000/catagories")
+        fetch("https://the-new-dragon-server-shahanulislam.vercel.app/catagories")
         .then(res => res.json())
         .then(data => setCatagories(data))
         .catch(error => console.error(error))
